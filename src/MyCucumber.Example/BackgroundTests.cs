@@ -3,26 +3,27 @@
 namespace MyCucumber.Example
 {
     /// <summary>
-    /// Some people would rather have all the unit test logic
-    /// held within the <see cref="TestClass"/> itself. These
-    /// people can create their tests, then point <see cref="Feature.Using"/>
-    /// to <c>this</c>.
+    /// Showcasing the use of the `Background` keyword.
     /// </summary>
     [TestClass]
-    public class KeepItInFamilyTests
+    public class BackgroundTests
     {
+        // define your background here
+        private readonly Feature background 
+            = new Background()
+            .Given("{tom} has a {large} cucumber")
+            .And("{annette} {is} wearing her glasses");
+
+
         [TestMethod]
-        public void TomsLargeCucumberShouldImpress_SingleClass()
+        public void TomsLargeCucumberShouldImpress_WithBackground()
         {
             new Feature("Feature1", 
                 "My feature description goes here and waffles lots and lots.")
-            .Given("{tom} has a {large} cucumber")
-            .And("{annette} {is} wearing her glasses")
+            .WithBackground(background) // <- now incorporate it here
             .When("tom shows annette his cucumber")
             .Then("she should say {oh my!}")
             .Using(this);
-
-            // or .Using(this, "WhateverMethodYouWant");
         }
 
         // notice how this method now lives inside the unttest class

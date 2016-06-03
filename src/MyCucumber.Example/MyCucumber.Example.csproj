@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Cucumber.cs" />
+    <Compile Include="BackgroundTests.cs" />
     <Compile Include="KeepItInFamilyTests.cs" />
     <Compile Include="UsingDelegateTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

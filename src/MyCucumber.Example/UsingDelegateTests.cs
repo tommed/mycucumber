@@ -2,11 +2,17 @@
 
 namespace MyCucumber.Example
 {
+    /// <summary>
+    /// Example unit test where the implementation of the
+    /// test can be delegated out to a separate class. This
+    /// class would then live elsewhere, keeping your folder
+    /// structure neat and tidy (if you like that kind of thing)
+    /// </summary>
     [TestClass]
     public class UsingDelegateTests
     {
         [TestMethod]
-        public void TomsLargeCucumberShouldImpress()
+        public void TomsLargeCucumberShouldImpress_Delegated()
         {
             new Feature("Feature1", 
                 "My feature description goes here and waffles lots and lots.")
@@ -20,6 +26,12 @@ namespace MyCucumber.Example
             // or .Using(typeof(CucumberTestImpl), "WhateverMethodYouWant");
             // or .Using<CucumberTestImpl>("WhateverMethodYouWant");
         }
+
+        // this test has been delegated to another class
+        // you could then optionally keep your implementation
+        // code separate from the gherkin-style method chain 
+        // above, especially if you are prone to compulsive
+        // class organising
         private sealed class CucumberTestImpl
         {
             public void Do(

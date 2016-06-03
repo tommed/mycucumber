@@ -11,6 +11,10 @@ namespace MyCucumber
         private readonly string name;
         private readonly List<Statement> statements = new List<Statement>();
 
+        public Feature()
+            : this("Untitled", null)
+        { }
+
         /// <summary>
         /// Cotr
         /// </summary>
@@ -20,6 +24,12 @@ namespace MyCucumber
         {
             this.name = name;
             this.description = description;
+        }
+
+        public Feature WithBackground(Feature background)
+        {
+            this.statements.AddRange(background.statements);
+            return this;
         }
 
         public Feature Given(string statementString)
