@@ -18,7 +18,9 @@ Right, let me Google that for you.
 There are a number of different implementations (as we are indeed all individual snowflakes),
 so to avoid anyone feeling left out, check out the overloads on `.Using` for more info.
 
-Here is just one method for using MyCucumber:
+Below is just one method for using MyCucumber. Notice how all the arguments wrapped
+in curly braces are passed automatically into to your delegate converted to the correct
+type - Enums, human booleans and anything that supports `IConvertible`. You're most welcome.
 
 ```csharp
 [TestClass]
