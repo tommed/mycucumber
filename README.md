@@ -63,6 +63,10 @@ public class KeepItInFamilyTests
 }
 ```
 
+Eventually, I'd like to separate the implementation code into sections
+so they can be isolated to just their single responsibility however,
+I'm still working on the best way to do this.
+
 ## How do I get my hands on MyCucumber?
 What you do in your own time is your business.
 
