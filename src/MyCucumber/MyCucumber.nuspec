@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MyCucumber</id>
+    <version>1.0.0.0</version>
+    <title>MyCucumber</title>
+    <authors>Tom Medhurst</authors>
+    <owners>Tom Medhurst</owners>
+    <licenseUrl>https://github.com/tommed/mycucumber/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/tommed/mycucumber</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Cucumber/Gherkin-style BDD test support library that doesn't suck, cross my heart.</description>
+    <releaseNotes>First release to NuGet.</releaseNotes>
+    <copyright>Copyright 2016 Tom Medhurst</copyright>
+    <tags>bdd nspec specflow gherkin testing unittests largevegetable you_cant_see_me</tags>
+  </metadata>
+</package>
